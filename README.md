@@ -25,6 +25,8 @@ After data cleaning, outlier removal, and imputation, the cleaned data set inclu
 
 *insert EDA images*
 
+![property type vs price](visualizations/propType_price.png)
+
 
 
 
