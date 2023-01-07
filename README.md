@@ -21,14 +21,46 @@ The Kaggle [dataset](https://www.kaggle.com/datasets/thedevastator/australian-ho
 
 After data cleaning, outlier removal, and imputation, the cleaned data set includes 843 observations and 8 columns. Of these, seven features were chosen for modeling housing prices. Building size, land size, and property type were chosen because housing size is a key component in determining property value. Bedroom, bathroom, and parking count can also affect housing value. Lastly, product depth may have an affect on how a property is marketed: housing considered "premiere" could have higher prices than those considered "standard".
 
-*insert descriptive statistics here*
+![prop type vs price](visualizations/propType_price.png)
 
-*insert EDA images*
+**Figure 1: Median price of property types.**
 
-![property type vs price](visualizations/propType_price.png)
+![prop type vs price](visualizations/bedroom_price.png)
 
+**Figure 2: Relationship between bedroom count and housing prices.**
 
+The exploratory data analysis (EDA) reveals some relationships between price and various predictors. Figure one shows that townhouses have the largest median listing price, with houses as the second most expensive property type. Meanwhile, figure two demonstrates a positive correlation between the number of bedrooms and housing price.
 
+|   | Median | IQR |
+| --- | --- | ---|
+|Building Size (meters squared)|147.0|103.0
+|Land Size (meters squared)|294.5|650.0|
+|Price (AUD)| 485000.0|177500.0|
+|Bedrooms|3.0|1.0|
+|Bathrooms|2.0|1.0|
+|Parking Count|2.0|1.0|
+
+**Table 1: Descriptive statistics of numeric columns.**
+
+|Property Type|Count|
+|---|---|
+|House|375|
+|Unit|221|
+|Apartment|192|
+|Townhouse|36|
+|Duplex/Semi-detached|19|
+
+**Table 2: Frequency of property types.**
+
+|Product Depth|Count|
+|---|---|
+|Premiere|563|
+|Feature|154|
+|Standard|126|
+
+**Table 3: Frequency of product depths.**
+
+In terms of descriptive statistics, table one shows the median and interquartile value of the numeric features as well as the target variable (building size, land size, price, etc); in each of the quantitative variable's cases, they possessed a right-skewed distribution. Table two and three show the frequency of various categories. 
 
 One key limitation of the data is that the target variable (price) is based on property listings, which are subject to underquoting. It would be more accurate to model based on housing sold, but that data is not publicly availible for Australian housing. Because of that, the model will most likely predict pricing that is consistently less than the true value of the property. Additionally, the dataset is relatively small, and as such may be prone to overfitting. Managing this issue will require model regularization.
 
@@ -62,19 +94,19 @@ By making these adjustments, future homeowners will be able to more easily find 
 
 This repository is organized into the following components:
 
-- **Data**: this section contains the original dataset from Kaggle (RealEstateAU_1000_Samples.csv) as well as the data used for modeling after the data cleaning process (data_clean.csv)
-- **Visualizations**: this section contains various data visualizations created during the exploratory data analysis (EDA).
+- **Data**: this folder contains the original dataset from Kaggle (RealEstateAU_1000_Samples.csv) as well as the data used for modeling after the data cleaning process (data_clean.csv)
+- **Visualizations**: this folder contains various data visualizations created during the exploratory data analysis (EDA).
 - **EDA.ipynb**: this Jupyter Notebook contains the all the data cleaning and EDA conducted during this project.
 - **Models.ipynb**: this Jupyter Notebook contains all the models developed during this project.
-- **Capstone.ipynb**: this notebook represents one of the final graded products of this project, including a definitive version of all the data cleaning, EDA, and modeling conducted during the project.
+- **Capstone.ipynb**: this notebook represents one of the final graded products of this project, including a definitive version of the data cleaning and modeling conducted during the project.
 
 ### Links
 
 - **Original dataset:** [(https://www.kaggle.com/datasets/thedevastator/australian-housing-data-1000-properties-sampled)](https://www.kaggle.com/datasets/thedevastator/australian-housing-data-1000-properties-sampled)
 
+- [**Capstone.ipynb**](/Capstone.ipynb)
 
 *link in the presentation here
-*and the capstone notebook
 
 #### Works Cited
 [1] Granwal, L. *Residential housing market in Australia - statistics & facts*. Statista, 12 Dec 2022, [https://www.statista.com/topics/4987/residential-housing-market-in-australia/#topicHeader__wrapper](https://www.statista.com/topics/4987/residential-housing-market-in-australia/#topicHeader__wrapper). Accessed 2 Jan 2023.
@@ -85,4 +117,8 @@ This repository is organized into the following components:
 
 ### Instructions
 
-*put instructions here later
+To reproduce the data analysis done here:
+
+1) Download the original dataset from Kaggle, in links.
+2) Run EDA.ipynb in its entirety for the data visualizations.
+3) Run Capstone.ipynb in its entirety for both data cleaning and modeling results.
