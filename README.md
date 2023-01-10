@@ -23,7 +23,7 @@ After data cleaning, outlier removal, and imputation, the cleaned data set inclu
 
 ![prop type vs price](visualizations/propType_price.png)
 
-**Figure 1: Median price of property types.**
+**Figure 1: Median price of dataset property types.**
 
 ![prop type vs price](visualizations/bedroom_price.png)
 
@@ -35,10 +35,10 @@ The exploratory data analysis (EDA) reveals some relationships between price and
 | --- | --- | ---|
 |Building Size (meters squared)|147.0|103.0
 |Land Size (meters squared)|294.5|650.0|
-|Price (AUD)| 485000.0|177500.0|
-|Bedrooms|3.0|1.0|
-|Bathrooms|2.0|1.0|
-|Parking Count|2.0|1.0|
+|Price (AUD)| 485,000.0|177,500.0|
+|Bedrooms|3|1|
+|Bathrooms|2|1|
+|Parking Spaces|2|1|
 
 **Table 1: Descriptive statistics of numeric columns.**
 
@@ -60,7 +60,7 @@ The exploratory data analysis (EDA) reveals some relationships between price and
 
 **Table 3: Frequency of product depths.**
 
-In terms of descriptive statistics, table one shows the median and interquartile value of the numeric features as well as the target variable (building size, land size, price, etc); in each of the quantitative variable's cases, they possessed a right-skewed distribution. Table two and three show the frequency of various categories. 
+In terms of descriptive statistics, table one shows the median and interquartile value of the numeric features as well as the target variable (building size, land size, price, etc); every quantitative feature possesses a right-skewed distribution. Table two and three show the frequency of various categories. 
 
 One key limitation of the data is that the target variable (price) is based on property listings, which are subject to underquoting. It would be more accurate to model based on housing sold, but that data is not publicly availible for Australian housing. Because of that, the model will most likely predict pricing that is consistently less than the true value of the property. Additionally, the dataset is relatively small, and as such may be prone to overfitting. Managing this issue will require model regularization.
 
@@ -77,7 +77,7 @@ The first was designed to serve as a baseline by predicting housing prices at th
 | Gradient Boosting | 87,969.37 |
 | Gradient Boosting (subsampled) | 85,967.02 |
 
-**Table 1: Comparison of model performance on holdout test datasets.**
+**Table 4: Comparison of model performance on holdout test dataset.**
 
 Based on the performance of each model, the gradient boosting model with subsampling performed the best because it held the lowest RMSE metric: on average, it predicts housing prices within 85,967.02 AUD of the true property value. Compared to the 124,670.31 AUD average error of the baseline model, it offers an approximately 31.04% accuracy improvement. By pursing lower RMSE values, potential buyers in the Australian market will be able to better approximate the true property price of housing, enabling them to make more informed decisions about housing and eventually secure a property of their own.
 
