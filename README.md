@@ -106,7 +106,7 @@ This repository is organized into the following components:
 
 - [**Capstone.ipynb**](/Capstone.ipynb)
 
-*link in the presentation here
+- [**Presentation.pptx**](/Presentation.pptx)
 
 #### Works Cited
 [1] Granwal, L. *Residential housing market in Australia - statistics & facts*. Statista, 12 Dec 2022, [https://www.statista.com/topics/4987/residential-housing-market-in-australia/#topicHeader__wrapper](https://www.statista.com/topics/4987/residential-housing-market-in-australia/#topicHeader__wrapper). Accessed 2 Jan 2023.
