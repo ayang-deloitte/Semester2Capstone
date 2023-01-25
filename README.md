@@ -1,8 +1,8 @@
 # Home in the Outback: Predicting Housing Prices in Australia
 
-Authored by Andrew Yang.
+By Andrew Yang.
 
-Potential homeowners and renters in Australia face affordability concerns about housing combined with frequent underquoting of properties in the real estate industry, which makes determining the true price of a property paramount. Using sample Australian real estate data from Kaggle to predict prices based on factors such as listing agency, room number, and property type, buyers can more accurately determine which properties they can afford. Utilizing a gradient boosting model with subsampling for regression, the model can predict housing list price within 85,967.02 Australian dollars (AUD), and can provide a preliminary price guide for listings.
+Potential homeowners and renters in Australia face affordability concerns about housing combined with frequent underquoting of properties in the real estate industry, which makes determining the true price of a property paramount. By using sample Australian real estate data from Kaggle to predict prices based on factors such as listing agency, room number, and property type, buyers can more accurately determine which properties they can afford. A gradient boosting model with subsampling for regression built on this data can predict housing listing price within 85,967.02 Australian dollars (AUD), and can provide a preliminary price guide for listings.
 
 <img width="800" alt="Australian housing" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Elger_Street_housing_001.jpg/640px-Elger_Street_housing_001.jpg">
 
@@ -99,6 +99,7 @@ This repository is organized into the following components:
 - **EDA.ipynb**: this Jupyter Notebook contains the all the data cleaning and EDA conducted during this project.
 - **Models.ipynb**: this Jupyter Notebook contains all the models developed during this project.
 - **Capstone.ipynb**: this notebook represents one of the final graded products of this project, including a definitive version of the data cleaning and modeling conducted during the project.
+- **Presentation.pptx**: this is the presentation component of the project.
 
 ### Links
 
@@ -120,5 +121,5 @@ This repository is organized into the following components:
 To reproduce the data analysis done here:
 
 1) Download the original dataset from Kaggle, in links.
-2) Run EDA.ipynb in its entirety for the data visualizations.
+2) Run EDA.ipynb in its entirety for all the data visualizations.
 3) Run Capstone.ipynb in its entirety for both data cleaning and modeling results.
