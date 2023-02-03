@@ -29,7 +29,23 @@ After data cleaning, outlier removal, and imputation, the cleaned data set inclu
 
 **Figure 2: Relationship between bedroom count and housing prices.**
 
-The exploratory data analysis (EDA) reveals some relationships between price and various predictors. Figure one shows that townhouses have the largest median listing price, with houses as the second most expensive property type. Meanwhile, figure two demonstrates a positive correlation between the number of bedrooms and housing price.
+![prop type vs price](visualizations/bathroom_price.png)
+
+**Figure 3: Relationship between bathroom count and housing prices.**
+
+![prop type vs price](visualizations/parking_price.png)
+
+**Figure 4: Relationship between parking space count and housing prices.**
+
+![prop type vs price](visualizations/buildsize_price.png)
+
+**Figure 5: Relationship between building size and housing prices.**
+
+![prop type vs price](visualizations/landsize_price.png)
+
+**Figure 6: Relationship between land size and housing prices.**
+
+The exploratory data analysis (EDA) reveals some relationships between price and various predictors. Figure one shows that townhouses have the largest median listing price, with houses as the second most expensive property type. Meanwhile, figure two demonstrates a positive correlation between the number of bedrooms and housing price. Additionally, figures three to six demostrate that there continues to be a positive correlation between the quantitative features and price.
 
 |   | Median | IQR |
 | --- | --- | ---|
@@ -85,7 +101,7 @@ Based on the performance of each model, the gradient boosting model with subsamp
 
 The final model is intended to be used by people who hope to become future property owners within the Australian housing market. For many, house hunting can be both difficult and time consuming. The addition of rampant underquoting as well as rising housing prices year after year makes it crucial for buyers to find a good deal that meets their requirements. If used as intended, the model will allow potential buyers the ability to more quickly determine which homes are truly within their price range, avoiding the trap of underquoted listings, as well as discover homes at a discount, which saves them both money and time.
 
-Still, there are various improvements possible for the model. The relatively small sample of the dataset used to develop the gradient boosting model with subsampling makes it possible that the model will perform poorly when faced with out-of-sample cases. Training the model on a larger dataset will both reduce potential issues with overfitting as well as expand the number of cases that it can handle. Additionally, as noted in a prior section, the dataset utilizes listing prices, which can be affected by the very prevalent issue of underquoting in the Australian real estate industry. Using data of sold housing would bring the models closer to their intended purpose. 
+Still, there are various improvements possible for the model. The relatively small sample of the dataset used to develop the gradient boosting model with subsampling makes it possible that the model will perform poorly when faced with out-of-sample cases. Training the model on a larger dataset will both reduce potential issues with overfitting as well as expand the number of cases that it can handle. Additionally, as noted in a prior section, the dataset utilizes listing prices, which can be affected by the very prevalent issue of underquoting in the Australian real estate industry. Using data of sold housing would bring the models closer to their intended purpose. Various features were also dropped due to time constraints such as property location (city) and listing agencies, but could be implemented in an attempt to improve model performance.
 
 By making these adjustments, future homeowners will be able to more easily find a property they can call home until Australia can resolve its housing affordability issue.
 
@@ -99,7 +115,7 @@ This repository is organized into the following components:
 - **EDA.ipynb**: this Jupyter Notebook contains the all the data cleaning and EDA conducted during this project.
 - **Models.ipynb**: this Jupyter Notebook contains all the models developed during this project.
 - **Capstone.ipynb**: this notebook represents one of the final graded products of this project, including a definitive version of the data cleaning and modeling conducted during the project.
-- **Presentation.pptx**: this is the presentation component of the project.
+- **Presentation.pdf**: this is the presentation component of the project.
 
 ### Links
 
@@ -107,7 +123,7 @@ This repository is organized into the following components:
 
 - [**Capstone.ipynb**](/Capstone.ipynb)
 
-- [**Presentation.pptx**](/Presentation.pptx)
+- [**Presentation.pdf**](/Presentation.pdf)
 
 #### Works Cited
 [1] Granwal, L. *Residential housing market in Australia - statistics & facts*. Statista, 12 Dec 2022, [https://www.statista.com/topics/4987/residential-housing-market-in-australia/#topicHeader__wrapper](https://www.statista.com/topics/4987/residential-housing-market-in-australia/#topicHeader__wrapper). Accessed 2 Jan 2023.
@@ -120,6 +136,6 @@ This repository is organized into the following components:
 
 To reproduce the data analysis done here:
 
-1) Download the original dataset from Kaggle, in links.
+1) Download the original dataset from Kaggle, in links, or use the original dataset in the "data" folder.
 2) Run EDA.ipynb in its entirety for all the data visualizations.
 3) Run Capstone.ipynb in its entirety for both data cleaning and modeling results.
